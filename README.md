@@ -39,7 +39,7 @@ Se accede desde el navegador ingresando la IP mostrada en el monitor serie.
 
 Aquí está el diagrama completo (sube tu imagen Fritzing con este nombre):
 
-/imagenes/diagrama_fritzing.jpg
+\Documents\invernadero_en_casa.jpg
 
 
 Agrega en tu repo:
