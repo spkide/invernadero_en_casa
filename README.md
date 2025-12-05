@@ -1,7 +1,16 @@
 🌱 Sistema de Riego Automático con ESP32, DHT11, FC-28 y Control Web
 
 Este proyecto implementa un sistema de riego automático utilizando un ESP32, un sensor de humedad de suelo FC-28, un sensor de temperatura/humedad DHT11 y un módulo relé para controlar una bomba de agua o motor.
-Además, incluye un servidor web que permite encender y apagar el motor manualmente desde cualquier dispositivo conectado a la misma red WiFi.
+Incluye una interfaz web que permite controlar el motor y visualizar los valores de los sensores en tiempo real.
+
+🖧 Diagrama del Proyecto
+
+Tu imagen está en la raíz del repositorio, por lo que se muestra así:
+
+![Diagrama del proyecto](invernadero_en_casa.jpg)
+
+
+Aquí se mostrará tu imagen:
 
 🚀 Características
 
@@ -9,98 +18,92 @@ Lectura de humedad del suelo (FC-28)
 
 Lectura de temperatura y humedad ambiente (DHT11)
 
-Control manual del motor/bomba mediante interfaz web
+Control del motor de agua mediante botones en la web
 
 Visualización de datos en tiempo real
 
-Código optimizado para ESP32
+Compatible con ESP32
 
-Compatible con redes WiFi 2.4Ghz
-
-Listo para añadir funciones avanzadas (riego automático, historiales, gráficos, etc.)
+Página web responsiva y ligera
 
 📡 Panel Web del ESP32
 
-El ESP32 genera una página web donde puedes:
-
-Ver el estado del motor
-
-Encender o apagar el motor
+Desde el navegador puedes:
 
 Ver temperatura
 
-Ver humedad relativa ambiente
+Ver humedad ambiente
 
 Ver humedad del suelo
 
-Se accede desde el navegador ingresando la IP mostrada en el monitor serie.
+Encender/Apagar el motor
 
-🖧 Conexiones de Hardware
+Revisar el estado del relé
 
-Aquí está el diagrama completo (sube tu imagen Fritzing con este nombre):
-
-\Documents\invernadero_en_casa.jpg
-
-
-Agrega en tu repo:
-
-![Diagrama del proyecto](imagenes/diagrama_fritzing.jpg)
+El ESP32 mostrará la IP en el monitor serie al conectarse.
 
 🛠️ Materiales
 
 ESP32
 
-Sensor de humedad de suelo FC-28
-
 Sensor DHT11
 
-Módulo relé de 1 o más canales
+Sensor FC-28 con módulo
 
-Bomba/motor de agua
+Módulo relé
 
-Fuente de alimentación (powerbank o batería)
+Motor/Bomba de agua
 
-Protoboard y cables Dupont
+Powerbank o batería recargable
+
+Protoboard / cables
 
 📄 Código del Proyecto
 
-El código incluye:
+El firmware está escrito en C++ usando Arduino Core para ESP32.
+Incluye:
 
-Configuración WiFi
+Configuración de WiFi
 
-Lectura de sensores
+Lecturas analógica y digital
 
-Servidor web
+Servidor web con páginas GET
 
-Control del relé
+Control de relé
 
-Puedes encontrar el código completo en:
-📁 /src/main.cpp (o tu ruta final)
+Puedes encontrarlo en:
 
-▶️ Cómo usar
+/src/main.cpp
 
-Configura tu SSID y contraseña en el código.
+
+o en la ruta donde lo subiste.
+
+▶️ Instrucciones de Uso
+
+Configura tu WiFi en el código (ssid y password).
 
 Sube el programa al ESP32.
 
-Abre el monitor serie y espera la IP asignada.
+Abre el monitor serie a 115200 baud.
 
-Entra a esa IP en tu navegador.
+Copia la IP local que aparece.
 
-Controla el motor y revisa los sensores en tiempo real.
+Pégala en tu navegador.
 
-📈 Futuras mejoras (opcional)
+Controla tu sistema desde la página web.
 
-Activar motor automáticamente si el suelo está seco
+📈 Mejoras Futuras
 
-Agregar base de datos para registrar datos históricos
+Riego automático según humedad del suelo
 
-Gráfico en tiempo real con Chart.js
+Notificaciones por Telegram
 
-App móvil
+Dashboard con gráficos
 
-Control por Telegram o MQTT
+Control por voz
+
+Panel avanzado con CSS modernizado
 
 📜 Licencia
 
-Este proyecto es de uso libre. Puedes modificarlo, mejorarlo o adaptarlo como desees.
+Este proyecto es de uso libre y puede modificarse libremente.
